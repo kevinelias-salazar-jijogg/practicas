@@ -1,0 +1,563 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+li {
+  line-height: 1.5em;
+  font-size: 1.05em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: #b92025;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+abbr {
+  cursor: default;
+}
+
+#encabezado, #barnav, #contenido, #pie {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#contenido {
+  padding-bottom: 20px;
+}
+
+.no-mostrado {
+  display: none;
+}
+
+.separador-linea-doble {
+  height: 4px;
+  background: url('../images/linea_doble.gif?1382941343') repeat-x;
+}
+
+.derecha {
+  float: right;
+}
+
+.izquierda {
+  float: left;
+}
+
+#contenido, #politicas {
+  background: 0 100% url('../images/linea_doble.gif?1382941343') repeat-x;
+  padding: 10px 0;
+}
+
+@font-face {
+  font-family: "Trajan Pro Regular";
+  src: url('fonts/trajanpro-regular.eot') format('embedded-opentype'), url('fonts/trajanpro-regular.ttf') format('truetype'), url('fonts/trajanpro-regular.svg') format('svg'), url('fonts/trajanpro-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Trajan Pro Bold";
+  src: url('fonts/trajanpro-bold.ttf') format('truetype'), url('fonts/trajanpro-bold.eot') format('embedded-opentype'), url('fonts/trajanpro-bold.svg') format('svg'), url('fonts/trajanpro-bold.woff') format('woff');
+}
+
+.trajan {
+  font-family: "Trajan Pro Regular";
+}
+
+.courier {
+  font-family: "Courier";
+}
+
+.titulo {
+  font-size: 1.5em;
+}
+.subtitulo {
+  font-size: 1.2em;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color:#b92025;
+}
+.primero {
+  padding-top: 0px;
+}
+.articulo-cuerpo p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#encabezado {
+  padding-top: 18px;
+}
+#encabezado #titulos {
+  font-family: "Trajan Pro Regular";
+  line-height: 1em;
+  margin-top: 10px;
+}
+#encabezado #titulos h1 {
+  font-family: "Trajan Pro Bold";
+  font-size: 1.2em;
+  text-decoration: underline;
+  padding: 5px 0 8px;
+}
+#encabezado #titulos h2 {
+  font-size: 1em;
+}
+#encabezado #titulos h3 {
+  font-size: 0.7em;
+}
+#encabezado #titulos h4 {
+  font-size: 0.5em;
+  line-height: 1.5em;
+}
+#encabezado #busqueda {
+  float: right;
+  margin-bottom: 10px;
+}
+#encabezado #logo-sep {
+  background: url('../images/logo_sep.png?1382957867') no-repeat;
+  float: left;
+  height: 88px;
+  width: 300px;
+  margin-top: 10px;
+}
+#encabezado #logo-dgeti {
+  background: url('../images/sems_dgeti.png?1382971324') no-repeat;
+  height: 79px;
+  width: 240px;
+  margin: -10px 0 0 10px;
+}
+
+.frm-busqueda {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 0 0 #f8f8f8;
+  padding: 5px 5px 3px 5px;
+  position: relative;
+}
+.frm-busqueda input {
+  background-color: white;
+  border: 1px solid #d6d6d6;
+  box-shadow: inset 1px 1px 0 #eeeeee;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 28px 0 10px;
+  width: 200px;
+}
+.frm-busqueda button {
+  position: absolute;
+  top: 60%;
+  right: 5px;
+  margin-top: -12px;
+  background: transparent;
+  background-image: url('../images/busqueda.png?1383146163');
+  background-repeat: no-repeat;
+  display: block;
+  height: 25px;
+  width: 25px;
+  text-indent: -9999px;
+  border: 0;
+  cursor: pointer;
+}
+
+#barnav {
+  clear: both;
+  height: 50px;
+  font-family: "Trajan Pro Regular";
+  font-size: 0.9em;
+  background-image: url('../images/fondo_menu.png?1383146163');
+  background-repeat: no-repeat;
+  background-size: 980px 50px;
+  background-position: center top;
+  border: 0;
+  background-color: transparent;
+}
+/*#barnav ul li {
+  display: inline-block;
+}
+#barnav ul li.primero::before {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+#barnav ul li::before {
+  background-image: url('../images/separa_menu.png?1383146163');
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 15px 15px 0;
+}
+#barnav ul li a {
+  color: #5f5e5c;
+}
+#barnav ul li a:hover {
+  color: #b92025;
+  text-decoration: none;
+}
+#barnav ul li a.hogar {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -20px;
+  background-image: url('../images/icono_inicio.png?1382984232');
+  background-repeat: no-repeat;
+}
+#barnav ul li a.hogar:hover {
+  background-image: url('../images/icono_inicio.png?1382984232');
+  background-position: 0 -20px;
+  background-repeat: no-repeat;
+}
+#barnav .dropdown ul li::before {
+background-image: url('');
+}
+#barnav .dropdown ul li {
+  display: block;
+}
+li[role=presentation] {
+  margin: 0;
+  padding: 1px;
+}
+li[role=presentation]::before {
+  margin: 0;
+}*/
+#contenido {
+  margin-top: 20px;
+}
+
+#notas-importantes {
+  height: 400px;
+  border: 8px solid #fafafa;
+  -webkit-box-shadow: 0px 0px 8px 0 #8a8a8a;
+  -moz-box-shadow: 0px 0px 8px 0 #8a8a8a;
+  box-shadow: 0px 0px 8px 0 #8a8a8a;
+  margin-bottom: 50px;
+}
+#notas-importantes .pasar {
+  position: relative;
+  width: 964px;
+  height: 384px;
+}
+#notas-importantes .informacion-nota {
+  color: #fafafa;
+}
+#notas-importantes .fondo-nota, #notas-importantes .texto-nota, #notas-importantes .enlace-nota {
+  position: absolute;
+  bottom: 0;
+}
+#notas-importantes .fondo-nota {
+  width: 100%;
+  height: 70px;
+  background-color: #8e181c;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+#notas-importantes .texto-nota {
+  width: 90%;
+  height: 55px;
+  padding-left: 20px;
+  padding-top: 5px;
+  text-shadow: 0px 1px 2px black;
+}
+#notas-importantes .texto-nota h1 {
+  font-family: "Trajan Pro Regular";
+  font-size: 1.5em;
+}
+#notas-importantes .texto-nota p {
+  padding-top: 5px;
+  font-family: "Trajan Pro Regular";
+  font-size: 0.8em;
+}
+#notas-importantes .enlace-nota {
+  font-family: "Trajan Pro Regular";
+  font-size: 0.8em;
+  right: 60px;
+  bottom: 10px;
+}
+#notas-importantes .enlace-nota a {
+  display: block;
+  padding-top: 8px;
+  width: 118px;
+  height: 35px;
+  background-image: url('../images/boton_rojo.png?1383146163');
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+#notas-importantes .enlace-nota a:hover {
+  text-decoration: none;
+}
+
+#notas {
+  width: 680px;
+  min-height: 160px;
+}
+#notas .nota {
+  position: relative;
+  padding-left: 270px;
+  min-height: 220px;
+  margin-bottom: 30px;
+  background-image: url('../images/sombra_notas_abajo.png?1383147381');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+#notas .nota img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-shadow: 0px 0px 5px #bdbdbd;
+  -moz-box-shadow: 0px 0px 5px #bdbdbd;
+  box-shadow: 0px 0px 5px #bdbdbd;
+}
+#notas .nota time {
+  position: absolute;
+  left: -11px;
+  top: 10px;
+  height: 38px;
+  width: 70px;
+  padding-left: 12px;
+  z-index: 2;
+  font-family: "Trajan Pro Regular";
+  font-size: 0.9em;
+  line-height: 34px;
+  background-image: url('../images/cinta.png?1383146163');
+  background-repeat: no-repeat;
+}
+#notas .nota h1 {
+  font-family: "Trajan Pro Regular";
+  font-size: 1.3em;
+  padding-top: 10px;
+}
+#notas .nota p {
+  text-align: justify;
+  color: #515151;
+  padding-top: 5px;
+  line-height: 1.2em;
+}
+#notas .nota .leer-mas {
+  display: inline-block;
+  margin-top: 1.6em;
+  width: 118px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Trajan Pro Regular";
+  font-size: 0.8em;
+  color: white;
+  background-image: url('../images/boton_rojo.png?1383146163');
+}
+#notas .nota .leer-mas:hover {
+  text-decoration: none;
+}
+
+#informacion {
+  padding-left: 5px;
+  border-left: 1px solid #bdbdbd;
+  width: 274px;
+  min-height: 400px;
+  text-align: center;
+}
+#informacion img {
+  -webkit-box-shadow: 0px 0px 5px #bdbdbd;
+  -moz-box-shadow: 0px 0px 5px #bdbdbd;
+  box-shadow: 0px 0px 5px #bdbdbd;
+  margin-bottom: 10px;
+}
+
+#carrusel {
+  clear: both;
+  border: 1px solid #bdbdbd;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #d7d7d7;
+  -webkit-box-shadow: 0px 0px 5px #bdbdbd;
+  -moz-box-shadow: 0px 0px 5px #bdbdbd;
+  box-shadow: 0px 0px 5px #bdbdbd;
+}
+#carrusel li {
+  display: inline-block;
+}
+
+#pie {
+  margin-bottom: 20px;
+}
+
+#politicas {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Trajan Pro Regular";
+  font-size: 0.8em;
+}
+#politicas, #politicas a {
+  color: #6b6b6b;
+}
+
+#enlaces {
+  clear: both;
+  margin: 50px 0;
+}
+#enlaces li {
+  display: block;
+  width: 230px;
+  margin: 5px 0;
+}
+#enlaces li a {
+  color: #515151;
+  padding-left: 5px;
+}
+#enlaces li a:hover {
+  color: #b92025;
+  text-decoration: none;
+}
+#enlaces li.bloque {
+  display: inline-block;
+}
+#enlaces .titulo-bloque {
+  font-family: "Trajan Pro Bold";
+  color: #b92025;
+}
+
+#social a.facebook, #social a.twitter {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  text-indent: -9999px;
+}
+#social a.facebook {
+  background-image: url('../images/facebook_twitter.png?1382993358');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+#social a.facebook:hover {
+  background-position: 0px -43px;
+}
+#social a.twitter {
+  background-image: url('../images/facebook_twitter.png?1382993358');
+  background-position: -43px 0px;
+  background-repeat: no-repeat;
+}
+#social a.twitter:hover {
+  background-position: -43px -43px;
+}
+
+#separador-sems {
+  margin: 0 0 30px;
+  position: relative;
+  clear: both;
+}
+#separador-sems #logo-sems {
+  background-image: url('../images/sems_footer.png?1382946314');
+  background-repeat: no-repeat;
+  display: block;
+  height: 60px;
+  width: 215px;
+  margin: 0 auto;
+  text-indent: -9999px;
+}
+#separador-sems #logo-sems::before, #separador-sems #logo-sems::after {
+  background: 0 100% url('../images/linea_doble.gif?1382941343') repeat-x;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 370px;
+  bottom: 28px;
+}
+#separador-sems #logo-sems::before {
+  left: 0;
+}
+#separador-sems #logo-sems::after {
+  right: 0;
+}
+
+#direccion {
+  font: 14px/17px serif;
+  text-align: center;
+}
+#direccion, #direccion a {
+  color: #848484;
+}
+.rojo {
+  color: #b92025;
+}
+.imagen-nota {
+  -webkit-box-shadow: 0px 0px 10px gray;
+  box-shadow: 0px 0px 10px gray;
+  border: 6px solid white;
+  margin: 10px 0;
+}
+
+/* Bloques de programas permanentes */
+.programa {
+  margin-top: 20px;
+  height: 200px;
+}
+.programa img {
+  box-shadow: 0 0 5px 2px #c8c6c6;
+}
+
+
+
+
+
+
+/* Bootstrap modifications */
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}

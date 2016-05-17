@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<title>Proyecto Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <style>
+        <!--nav-barra-navegacion-->
+        nav li   
+        {
+            display: inline-block;
+            background-color:beige;
+            padding: 10px;  <!--Sangria-->
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px;
+        }
+        nav a: hover
+        { 
+            background-color: darkblue;}
+    </style> 
+<body>
+   <div class="container block-center"> <!--div=Bloque o division-->
+        <header id="encabezado">
+            <figure>
+                <img src="images/logo_sep.png"> <!-- imagen del logo SEP -->
+            </figure> 
+        <div id="titulos"> <!-- Titulo con TEXTO --> <!-- Bloque o division-->                        
+            <h1>Sitio Oficial del CETis No.108</h1>
+            <h2>Subsecretaria de Educacion Media Superior</h2>
+            <h3>Direccion General de Edcucacional Tecnologica Industrial</h3>
+            <h4>Centro de Estudios Tecnologicos Indusrial y de Servicios No.108</h4>
+            <h4>"Gral. Gabriel Leyva Solano" C.C.T 25DCT0108H</h4>
+         </div>
+        <div id="busqueda"> <!-- imagen de SEMS-DGETI y cuadro de BUSQUEDA -->
+            <figure>
+                <img src="images/sems_dgeti.png">
+            </figure>
+                <input type="text" name="buscar">
+                    <button>Buscar</button>
+        </div>
+        </header>
+        <nav id="barra-navegacion">
+            <ul> <!--Undered list-->
+                <li><a href="#">Inicio</a></li> <!--HREF=Para hacer ipervinculos-->
+                <li><a href="#">Plantel</a></li>
+                <li><a href="#">Oferta Educativa</a></li>
+                <li><a href="#">Alumnos</a></li>
+                <li><a href="#">Docentes</a></li>
+                <li><a href="#">Empleados</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+            <main id="contenido">
+                <section id="nota-principal"> <!--SECTIOB=Se usan como bloques y se definen con id-->
+                    <figure>
+                        <img id="imagen"src="images/prepa_en_linea_2016.jpg" alt="prepa en linea" width= 900px;>
+                    </figure>
+                </section>
+                <section id="notas-secundarias">Nota Secundaria</section>
+                    <aside id="publicidad">Publicidad</aside> <!--aside=para flotar a la derecha o izquierda(publicidad)-->
+            </main>
+        <footer id="pie">Pie de Pagina</footer> <!--Normalmente se usa aqui en el pie de pagina-->
+    </div>         
+</body>
+</html>
