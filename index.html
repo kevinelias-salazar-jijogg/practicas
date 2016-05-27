@@ -1,68 +1,118 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-	<title>Proyecto Web</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Proyecto web</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- link=Se usa para llamar a un archivo externo -->
 </head>
-    <style>
-        <!--nav-barra-navegacion-->
-        nav li   
-        {
-            display: inline-block;
-            background-color:beige;
-            padding: 10px;  <!--Sangria-->
-        }
-        nav a {
-            display: inline-block;
-            padding: 10px;
-        }
-        nav a: hover
-        { 
-            background-color: darkblue;}
-    </style> 
 <body>
-   <div class="container block-center"> <!--div=Bloque o division-->
+    <div class="container">
         <header id="encabezado">
-            <figure>
-                <img src="images/logo_sep.png"> <!-- imagen del logo SEP -->
-            </figure> 
-        <div id="titulos"> <!-- Titulo con TEXTO --> <!-- Bloque o division-->                        
-            <h1>Sitio Oficial del CETis No.108</h1>
-            <h2>Subsecretaria de Educacion Media Superior</h2>
-            <h3>Direccion General de Edcucacional Tecnologica Industrial</h3>
-            <h4>Centro de Estudios Tecnologicos Indusrial y de Servicios No.108</h4>
-            <h4>"Gral. Gabriel Leyva Solano" C.C.T 25DCT0108H</h4>
-         </div>
-        <div id="busqueda"> <!-- imagen de SEMS-DGETI y cuadro de BUSQUEDA -->
-            <figure>
-                <img src="images/sems_dgeti.png">
+            <figure>    <!--figure=Se usa para identificar las imagenes en bloques -->
+                <img src="images/logo_sep.png" alt="Logtipo SEP">   <!-- imagen del logo SEP -->
             </figure>
-                <input type="text" name="buscar">
-                    <button>Buscar</button>
-        </div>
+            <div id="titulos"> <!-- Titulo con TEXTO --> <!-- Bloque o division--> 
+                <h1>Sitio Oficial del CETis No. 108</h1>
+                <h2>Subsecretaría de Educación Media Superior</h2>
+                <h3>Dirección General de Educación Tecnológica Industrial</h3>
+                <h4>Centro de Estudios Tecnológicos industrial y de servicios No. 108</h4>
+                <h4>"Gral. Gabriel Leyva Solano" C.C.T. 25DCT0108H</h4>
+            </div>
+            <div id="busqueda"> <!-- Cuadro de BUSQUEDA -->
+                <figure>
+                    <img src="images/sems_dgeti.png" alt="Logotipo SEMS DGETI"> <!-- Imagen de SEMS-DGETI -->
+                </figure>
+                <input type="text" name="busqueda" id="busqueda">
+                <button>Buscar</button>
+            </div>
         </header>
-        <nav id="barra-navegacion">
-            <ul> <!--Undered list-->
-                <li><a href="#">Inicio</a></li> <!--HREF=Para hacer ipervinculos-->
+        <nav id="menu"> <!-- nav=Se usa para identificar con esta etiqueta la barra-navegacion -->
+            <ul> <!-- Undered list -->
+                <li><a href="#">Inicio</a></li> <!-- li=List item --> <!-- HREF=Para hacer hipervinculos -->
                 <li><a href="#">Plantel</a></li>
-                <li><a href="#">Oferta Educativa</a></li>
-                <li><a href="#">Alumnos</a></li>
+                <li>
+                    <a href="#">Oferta educativa</a>
+                    <ul>
+                        <li><a href="#">Programación</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Contabilidad</a></li>
+                        <li><a href="#">Mantenimiento Aut.</a></li>
+                        <li><a href="#">Ele.</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Alumnos</a>
+                    <ul>
+                        <li><a href="#">Horarios</a></li>
+                        <li><a href="#">Calificaciones</a></li>
+                        <li><a href="#">Convocatorias</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Docentes</a></li>
                 <li><a href="#">Empleados</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-            <main id="contenido">
-                <section id="nota-principal"> <!--SECTIOB=Se usan como bloques y se definen con id-->
-                    <figure>
-                        <img id="imagen"src="images/prepa_en_linea_2016.jpg" alt="prepa en linea" width= 900px;>
+        <main id="contenido">
+            <section id="nota-importante"> <!-- section=Se usan como bloques y se definen con id-->
+                <img src="images/nota-importante.jpg" alt="Nota importante">
+            </section>
+            <section id="notas-secundarias">
+                <article>
+                    <figure class="imagen-nota-secundaria">
+                        <img class="sombra-imagen" src="images/notas/1/tmb.jpg" alt="imagen">
+                        <span>16 Feb</span>
                     </figure>
-                </section>
-                <section id="notas-secundarias">Nota Secundaria</section>
-                    <aside id="publicidad">Publicidad</aside> <!--aside=para flotar a la derecha o izquierda(publicidad)-->
-            </main>
-        <footer id="pie">Pie de Pagina</footer> <!--Normalmente se usa aqui en el pie de pagina-->
-    </div>         
+                    <div class="cuerpo-nota-secundaria">
+                        <h2 class="titulo-nota-secundaria">Encuentro nacional de escoltas y bandas de guerra</h2>
+                        <p class="intro-nota-secundaria">Destacada participación del CETis No. 108 en Encuentro Nacional de Escoltas y Bandas de Guerra, obteniendo el Primer Lugar en Escolta de Bandera Categoría Libre, asi como...</p>
+                        <a href="#">
+                            <div class="boton">
+                                <div>
+                                    <p>Leer más</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="#" alt="imagen">
+                    </figure>
+                    <div>
+                        <h2>titulo de la nota</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima soluta magnam architecto porro quisquam ducimus ipsum iure, optio sed sint, quia nemo a qui dignissimos, quibusdam voluptatem nostrum! Assumenda, eius!</p>
+                        <button>Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="#" alt="imagen">
+                    </figure>
+                    <div>
+                        <h2>titulo de la nota</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima soluta magnam architecto porro quisquam ducimus ipsum iure, optio sed sint, quia nemo a qui dignissimos, quibusdam voluptatem nostrum! Assumenda, eius!</p>
+                        <button>Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="#" alt="imagen">
+                    </figure>
+                    <div>
+                        <h2>titulo de la nota</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima soluta magnam architecto porro quisquam ducimus ipsum iure, optio sed sint, quia nemo a qui dignissimos, quibusdam voluptatem nostrum! Assumenda, eius!</p>
+                        <button>Ver más</button>
+                    </div>
+                </article>
+            </section>
+            <aside id="publicidad"> <!-- aside=para flotar a la derecha o izquierda(publicidad) -->
+                publicidad
+            </aside>
+        </main>
+        <footer id="pie"> <!-- footer= Normalmente se usa aqui en el pie de pagina -->
+            pie de pagina
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,91 +1,141 @@
-/* Propiedades para el archivo index(proyecto_web)*/
-.container 
-{ 
-    width: 920px; /* Ancho*/
-    margin: 0 auto; /* margen */
-}
+/* Propiedades para el archivo index(proyecto_web) */
+h1,h2,h3,h4,h5,h6,figure,p { margin: 0; padding: 0; }    /*  En esta linea puse todo en una sola, usted dijo que si podia y que es para ahorrar y minimizar las lineas de codigo  1 */
 
-#encabezado
-{
-    height: 120px; /* Alto*/
-    display: flex; /* Definir el ancho de NS y de Publicidad*/
+.container { 
+    width: 920px;   /* Ancho */
+    margin: 0 auto; }   /* Margen */
+
+#encabezado {
+    height: 120px;  /* Alto */
+    display: flex;  /* Definir el ancho de NS y de Publicidad */
     justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
 }
 
-#encabezado figure { margin: 0; } /* En esta linea puse todo en una sola. usted dijo que si servia y que es para ahorrar y minimizar las lineas de codigo." 1 "*/
+#encabezado figure { margin: 0; }   /* Ahorrar linea 2 */
 
-#encabezado #titulos * { margin: 0; } /* Ahorrar linea" 2 "*/
-#titulos h1 { font-size: 1.5em}
-#titulos h2 { font-size: 1.2em}
-#titulos h3 { font-size: 0.9em}
-#titulos h4 { font-size: 0.8em}
+#titulos * { margin: 0; }   /* Ahorrar linea 3 */
 
-#barra-navegacion 
-{
+#encabezado h1 { font-size: 1.2em; }
+#encabezado h2 { font-size: 1em; }
+#encabezado h3 { font-size: 0.9em; }
+#encabezado h4 { font-size: 0.8em; }
+
+#contenido { }
+
+#nota-importante {
+    height: 360px;
+    background-color: #6bc6a3;
+    margin: 20px 0;
+    box-shadow: 0 0 15px darkgray;
+}
+
+#nota-importante img {  border: 10px solid white; } /* Ahorrar linea 4 */
+
+#notas-secundarias {
+    min-height: 300px; /* Para que cuando no tenga informacion quede un espacio, en este caso de 300px */
+    width: 700px;
+    display: inline-block;  /* Para quitar viñeta y linea */
+    float: left; /* Para que notas-secundarias flote a la IZQUIERDA */
+}
+
+#notas-secundarias article {
+    display: flex;
+    background-image: url('../images/separador-nota-secundaria.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.imagen-nota-secundaria { position: relative; } /* Ahorrar linea 5 */
+
+.sombra-imagen { box-shadow: 0px 0px 5px #bdbdbd; } /* Ahorrar linea 6 */
+
+.imagen-nota-secundaria span {
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    padding: 5px 10px;
+    background-color: lightgray;
+}
+
+.titulo-nota-secundaria {
+    font-size: 1.7em;
+    line-height: 0.9em;
+    font-variant: small-caps;
+}
+
+.cuerpo-nota-secundaria {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.intro-nota-secundaria {
+    text-align: justify;
+    margin: 10px 0;
+}
+
+#publicidad {
+    height: 300px;
+    width: 220px;
+    display: inline-block;
+    float: right;
+    background-color: #dd3dd0;
+}
+
+#pie {
+    height: 150px;
+    clear: both;
+    background-color: #3df8ff;
+}
+
+#menu {
     height: 50px;
     display: flex;
     justify-content: center;
+    background-color: darkgray;
 }
 
-#barra-navegacion li 
-{
-    display: inline-block; /* Para quitar viñeta y linea*/
-    padding: 0; /* Sangria*/
+#menu ul { padding: 0; }    /* Ahorrar linea 7 */
+
+#menu li {
+    list-style-type: none;
+    padding: 0;
 }
 
-#barra-navegacion ul ul { display: none; } /* Ahorrar linea" 3 "*/
+#menu>ul>li { display: inline-block; }  /* Ahorrar linea 8 */
 
-#barra-navegacion a 
-{
-    color: black;
+#menu li a {
     text-decoration: none;
-    padding: 10px 20px;
+    color: black;
+}
+
+#menu>ul>li>a {
+    padding: 10px;
     background-color: darkgray;
     transition: 0.5s;
 }
 
+#menu>ul>li>a:hover { background-color: lightgray; }    /* Ahorrar linea 9 */
 
+#menu li ul { display: none; }  /* Ahorrar linea 10 */
 
-#barra-navegacion ul { padding: 0; }  /* Ahorrar linea" 4 "*/
-
-
-
-#barra-navegacion > ul > li > a:hover { background-color: lightgray; } /* Ahorrar linea" 5 "*/
-
-#nota-principal 
-{
-    background-color: darkblue;
-    border: 10px solid #ddd;
-    box-shadow: 0 0 10px #ddd;
+.boton {
+    background: #AA3521;
+    display: inline-block;
+    padding: 3px;
+    box-shadow: 0px 1px 3px darkgray;
 }
 
-
-#notas-secundarias 
-{
-    width: 660px;
-    padding: 20px;
-    float: left;
-    height: 260px;
-    background-color: darkblue;  
+.boton>div {
+    padding: 1px 20px;
+    border: 1px solid rgba(255,255,255,.7);
 }
 
-#publicidad 
-{
-    width: 210px;
-    padding: 5px;
-    float: right;
-    height: 290px;
-    background-color: darkblue;
+.boton p {
+    color: white;
+    font-variant: small-caps;
+    font-size: 1.1em;
 }
-
-
-#pie 
-{
-    clear: both;
-    height: 150px;
-    background-color: darkblue;
-}
-
-figure { margin: 0; }  /* Ahorrar linea" 6 "*/
-
-main { margin-top: 10px; } /* Ahorrar linea" 7 "*/
