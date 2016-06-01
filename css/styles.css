@@ -76,13 +76,19 @@ h1,h2,h3,h4,h5,h6,figure,p { margin: 0; padding: 0; }    /*  En esta linea puse 
     text-align: justify;
     margin: 10px 0;
 }
+.ver-mas p {
+    color: white;
+    font-size: 
+}
 
-#publicidad {
-    height: 300px;
-    width: 220px;
-    display: inline-block;
+#anuncios {
+    height: 210px;
+    padding: 5px;
     float: right;
-    background-color: #dd3dd0;
+    min-height: 290px;;
+}
+#anuncios > img {
+    margin: 3px 0;
 }
 
 #pie {
@@ -138,4 +144,22 @@ h1,h2,h3,h4,h5,h6,figure,p { margin: 0; padding: 0; }    /*  En esta linea puse 
     color: white;
     font-variant: small-caps;
     font-size: 1.1em;
+}
+.facebook, twitter {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+}
+.facebook {
+    background: url('../images/facebook_twitter.png') 0 0; 
+}
+.twitter {
+    background: url('../images/facebook_twitter.png') -43px 0;
+}
+.facebook:hover {
+    background: url('../images/facebook_twitter.png') -43 0; 
+}
+.twitter {
+    background: url('../images/facebook_twitter.png') -43px -43;
 }
